@@ -266,7 +266,7 @@ open class HorizontalBarChartRenderer: BarChartRenderer
             }
 
             let isTopRect = (j % stackSize == stackSize - 1)
-            if (dataSet.hasRoundedCorners && isTopRect)
+            if (!dataSet.roundedCorners.isEmpty && isTopRect)
             {
                 let cornerRadius = barRect.height / 2.0
                 let path = UIBezierPath.init(roundedRect: barRect,
@@ -704,7 +704,7 @@ open class HorizontalBarChartRenderer: BarChartRenderer
                 
                 setHighlightDrawPos(highlight: high, barRect: barRect)
                 
-                if (set.hasRoundedCorners)
+                if (!set.roundedCorners.isEmpty)
                 {
                     let cornerRadius = barRect.width / 2.0
                     let path = UIBezierPath.init(roundedRect: barRect,
