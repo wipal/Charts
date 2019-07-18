@@ -959,7 +959,7 @@ open class BarChartRenderer: BarLineScatterCandleBubbleRenderer
 
     private func createBarPath(for rect: CGRect, roundedCorners: UIRectCorner) -> UIBezierPath {
 
-        let cornerRadius = rect.height / 2.0
+        let cornerRadius = 4 //rect.height / 2.0
 
         let path = UIBezierPath.init(
             roundedRect: rect,
